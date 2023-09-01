@@ -2,6 +2,7 @@ import editJsonFile from 'edit-json-file'
 import readline from 'readline'
 import {oraPromise} from "ora";
 import {ChatGPTAPI} from "chatgpt";
+import {openAIKey} from '../ignored/API'
 
 class Step {
     constructor(name, description, parent1, parent2) {
@@ -54,7 +55,7 @@ let tmpStepThreeClasses = {};
 let tmpStepForeClasses = {};
 
 const api = new ChatGPTAPI({
-    apiKey: "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"
+    apiKey: openAIKey
 })
 
 const prompt = 'Bonjour';
