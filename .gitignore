@@ -1,0 +1,23 @@
+# Project exclude paths
+/.idea
+
+/backend/config.js
+/backend/jsons/
+/backend/logs/
+/backend/node_modules/
+
+/tools/node_modules/
+
+/website/node_modules/
+/website/.pnp
+/website/.pnp.js
+/website/coverage
+/website/build
+/website/.DS_Store
+/website/.env.local
+/website/.env.development.local
+/website/.env.test.local
+/website/.env.production.local
+/website/npm-debug.log*
+/website/yarn-debug.log*
+/website/yarn-error.log*
