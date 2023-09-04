@@ -2,8 +2,8 @@
 /.idea
 
 /backend/config.js
-/backend/jsons/
-/backend/logs/
+/backend/database/
+/backend/utils/logs/
 /backend/node_modules/
 
 /tools/node_modules/
