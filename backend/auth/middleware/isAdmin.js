@@ -6,7 +6,7 @@ const isAdmin = (req, res, next) => {
 
     // Vérifier si le token existe
     if (!token) {
-        return res.status(401).json({ message: 'Unauthorized' });
+        return res.status(401).json({message: 'Unauthorized'});
     }
 
     try {
@@ -15,13 +15,13 @@ const isAdmin = (req, res, next) => {
 
         // Vérifier si l'utilisateur a le rôle d'admin
         if (decodedToken.role !== 'admin') {
-            return res.status(403).json({ message: 'Forbidden' });
+            return res.status(403).json({message: 'Forbidden'});
         }
 
         // Passer au middleware suivant
         return next();
     } catch (error) {
-        return res.status(401).json({ message: 'Unauthorized' });
+        return res.status(401).json({message: 'Unauthorized'});
     }
 };
 

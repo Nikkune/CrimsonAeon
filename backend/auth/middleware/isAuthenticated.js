@@ -6,7 +6,7 @@ const isAuthenticated = (req, res, next) => {
 
     // Vérifier si le token existe
     if (!token) {
-        return res.status(401).json({ message: 'Unauthorized' });
+        return res.status(401).json({message: 'Unauthorized'});
     }
 
     try {
@@ -19,7 +19,7 @@ const isAuthenticated = (req, res, next) => {
         // Passer au middleware suivant
         return next();
     } catch (error) {
-        return res.status(401).json({ message: 'Unauthorized' });
+        return res.status(401).json({message: 'Unauthorized'});
     }
 };
 
