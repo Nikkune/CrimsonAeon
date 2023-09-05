@@ -22,5 +22,5 @@ Ce référentiel fournit également des outils qui simplifient le processus de c
 
 ## Contribuer
 
-Actuellement, ce référentiel ne prend pas en charge les contributions externes.
+Actuellement, ce repository ne prend pas en charge les contributions externes.
 
