@@ -43,7 +43,6 @@ class User {
             usersData = [];
         }
         usersData.push(newUser);
-        console.log(usersData);
         await writeUsersData(usersData);
     }
 }
@@ -54,7 +53,6 @@ async function readUsersData() {
 }
 
 async function writeUsersData(data) {
-    console.log(data);
     const file = editJsonFile(config.database.usersPath);
     file.set("db", data);
     file.save();
