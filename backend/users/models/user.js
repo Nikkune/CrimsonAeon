@@ -50,13 +50,13 @@ class User {
 
 async function readUsersData() {
     const file = editJsonFile(config.database.usersPath);
-    return file.get("base");
+    return file.get("db");
 }
 
 async function writeUsersData(data) {
     console.log(data);
     const file = editJsonFile(config.database.usersPath);
-    file.set("base", data);
+    file.set("db", data);
     file.save();
 }
 
