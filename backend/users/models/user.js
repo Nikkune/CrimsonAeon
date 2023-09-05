@@ -12,11 +12,19 @@ class User {
 
     static async findById(id) {
         const usersData = await readUsersData();
+        if (!Array.isArray(usersData)) {
+            // Gérer le cas où les données ne sont pas un tableau
+            return null;
+        }
         return usersData.find(user => user.id === id);
     }
 
     static async findByEmail(email) {
         const usersData = await readUsersData();
+        if (!Array.isArray(usersData)) {
+            // Gérer le cas où les données ne sont pas un tableau
+            return null;
+        }
         return usersData.find(user => user.email === email);
     }
 
@@ -30,20 +38,25 @@ class User {
     }
 
     static async save(newUser) {
-        const usersData = await readUsersData();
+        let usersData = await readUsersData();
+        if (!Array.isArray(usersData)) {
+            usersData = [];
+        }
         usersData.push(newUser);
+        console.log(usersData);
         await writeUsersData(usersData);
     }
 }
 
 async function readUsersData() {
     const file = editJsonFile(config.database.usersPath);
-    return file.get();
+    return file.get("base");
 }
 
 async function writeUsersData(data) {
+    console.log(data);
     const file = editJsonFile(config.database.usersPath);
-    file.set(data);
+    file.set("base", data);
     file.save();
 }
 
