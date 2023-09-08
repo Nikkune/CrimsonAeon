@@ -1,23 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import {BrowserRouter} from "react-router-dom";
 import App from './App.js'
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-
-const theme = createTheme({
-    palette: {
-        type: 'dark', // Mode sombre
-        primary: {
-            main: '#ff5722', // Couleur primaire personnalisée
-        },
-    },
-});
-
+import "./styles/index.scss";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <ThemeProvider theme={theme}>
+        <BrowserRouter>
             <App/>
-        </ThemeProvider>
+        </BrowserRouter>
     </React.StrictMode>
 );

@@ -1,0 +1,29 @@
+@import "./loader";
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  transition: all ease 500ms;
+}
+
+::-webkit-scrollbar {
+  background: transparent;
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #919EAB;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #454F5B;
+  border-radius: 5px;
+}
