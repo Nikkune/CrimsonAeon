@@ -17,7 +17,7 @@ exports.signup = async (req, res) => {
     const hashedPassword = await bcrypt.hash(password, 10);
 
     // Créer un nouvel utilisateur
-    const newUser = new User(id, username, email, hashedPassword, role);
+    const newUser = new User(id, username, email, hashedPassword, role, "light");
 
     // Enregistrer l'utilisateur dans la base de données
     await User.save(newUser);
