@@ -1,5 +1,5 @@
 import React, {useContext, useState} from 'react';
-import {Outlet} from 'react-router-dom';
+import {NavLink, Outlet} from 'react-router-dom';
 import {AppBar, Avatar, Badge, Box, Button, Divider, IconButton, Popover, Stack, SvgIcon, Toolbar, Typography} from "@mui/material";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import ModeMUIContext from "../context/ModeMUI";
@@ -122,7 +122,9 @@ const NavDashboardWrapper = () => {
                         </SvgIcon>
                     </IconButton>
                     <Box sx={{width: 100 + "%", height: 64 + "px", display: "flex", justifyContent: "center", alignItems: "center"}}>
-                        <img src={CrimsonAeon} loading="lazy" alt="Crimson Aeon Logo" style={{width: 40 + "px", height: 40 + "px", borderRadius: 50 + "%"}}/>
+                        <NavLink to={"/"}>
+                            <img src={CrimsonAeon} loading="lazy" alt="Crimson Aeon Logo" style={{width: 40 + "px", height: 40 + "px", borderRadius: 50 + "%"}}/>
+                        </NavLink>
                     </Box>
                     <Box sx={{height: "calc(100% - 100px)", padding: toggled ? 16 + "px" : 8 + "px", overflowY: "auto", overflowX: "hidden", transition: "all ease 500ms"}}>
                         <NavDashboardDrawer name="Drawer 1">
