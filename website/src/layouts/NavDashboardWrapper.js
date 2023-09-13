@@ -89,7 +89,7 @@ const NavDashboardWrapper = () => {
 
     return (
         <>
-            <Box sx={{backgroundColor: theme => mode === "dark" ? theme.palette.grey["900"] : "#fff", height: 100 + "vh", width: 100 + "%", transition: "background ease 500ms"}}>
+            <Box sx={{backgroundColor: theme => mode === "dark" ? theme.palette.grey["900"] : theme.palette.background.default, height: 100 + "vh", width: 100 + "%", transition: "background ease 500ms"}}>
                 <AppBar position="fixed" component="header" sx={{minHeight: 64 + "px", backdropFilter: "blur(5px)", background: "transparent", width: toggled ? "calc(100% - 280px)" : "calc(100% - 100px)", boxShadow: "none", zIndex: 1001, transition: "all ease 500ms"}}>
                     <Toolbar>
                         <Stack sx={{flexDirection: "row", alignItems: "center", height: 36 + "px"}}>

@@ -7,6 +7,10 @@ import {createTheme} from "@mui/material";
 import {ThemeProvider} from "@mui/material/styles";
 import ModeMUIContext from "./context/ModeMUI";
 import Loader from "./features/Loader";
+import Login from "./features/Login";
+import SignUp from "./features/SignUp";
+import ForgetPassword from "./features/ForgetPassword";
+import CheckEmail from "./features/CheckEmail";
 
 const getDesignTokens = (mode) => ({
     palette: {
@@ -89,8 +93,13 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<NavWrapper/>}>
                         {/* Exemple : <Route path="/" element={<Home/>}/>*/}
+                        <Route path="*" element={<Loader/>}/>
                     </Route>
                     <Route path="/auth" element={<NavAuthWrapper/>}>
+                        <Route index element={<SignUp/>}/>
+                        <Route path="login" element={<Login/>}/>
+                        <Route path="forgetPW" element={<ForgetPassword/>}/>
+                        <Route path="checkEmail" element={<CheckEmail/>}/>
                         {/* Exemple : <Route path="/" element={<SignUp/>}/>*/}
                     </Route>
                     <Route path="/dashboard" element={<NavDashboardWrapper/>}>
